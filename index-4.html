@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maiga Élevage — Vente en ligne</title>
+<meta name="description" content="Maiga Élevage — vente de volailles, pintadeaux, dindons et poules pondeuses au Burkina Faso.">
+<style>
+:root{--green:#176b3a;--dark:#103c27;--gold:#f2b632;--light:#f6faf7;--white:#fff;--muted:#66756c}
+*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#183126;background:var(--light)}
+header{background:linear-gradient(135deg,#103c27,#176b3a);color:white;position:sticky;top:0;z-index:10}
+.nav{max-width:1100px;margin:auto;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-size:22px;font-weight:800}.logo span{color:var(--gold)}
+nav a{color:#fff;text-decoration:none;margin-left:18px;font-weight:700;font-size:14px}
+.hero{max-width:1100px;margin:auto;padding:70px 18px 60px;display:grid;grid-template-columns:1.15fr .85fr;gap:35px;align-items:center}
+.badge{display:inline-block;background:#fff0c7;color:#795400;padding:8px 12px;border-radius:30px;font-weight:700;font-size:13px}
+h1{font-size:clamp(38px,6vw,64px);line-height:1.02;margin:18px 0}.hero p{font-size:18px;color:#52655b;line-height:1.6}
+.btn{display:inline-block;border:0;border-radius:12px;padding:14px 20px;font-weight:800;text-decoration:none;cursor:pointer}
+.primary{background:var(--green);color:white}.secondary{background:white;color:var(--green);border:1px solid #d6e3da;margin-left:8px}
+.hero-card{background:white;border-radius:28px;padding:28px;box-shadow:0 15px 45px #123c2718}
+.emoji{font-size:90px;text-align:center;padding:25px;background:#edf7ef;border-radius:22px}
+section{max-width:1100px;margin:auto;padding:55px 18px}.title{text-align:center;margin-bottom:30px}.title h2{font-size:34px;margin:0 0 8px}.title p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{background:white;border-radius:20px;overflow:hidden;box-shadow:0 8px 25px #123c2710}.pic{height:150px;display:grid;place-items:center;font-size:70px;background:#eef7f0}.content{padding:18px}.content h3{margin:0 0 8px}.price{font-weight:900;color:var(--green);font-size:20px;margin:10px 0}.content p{color:var(--muted);font-size:14px;min-height:40px}.order{width:100%;background:var(--gold);color:#3c2a00}
+.about{background:#103c27;color:white;max-width:none}.about-inner{max-width:1100px;margin:auto;padding:55px 18px;display:grid;grid-template-columns:1fr 1fr;gap:30px}.about p{line-height:1.7;color:#d8e8df}
+form{background:white;padding:25px;border-radius:22px;box-shadow:0 8px 25px #123c2710;max-width:700px;margin:auto}
+label{display:block;font-weight:700;margin:14px 0 7px}input,select,textarea{width:100%;padding:13px;border:1px solid #d5e0d9;border-radius:10px;font:inherit}textarea{min-height:100px}.submit{margin-top:18px;width:100%;background:var(--green);color:white}
+footer{background:#09281a;color:#dbe9e1;text-align:center;padding:30px 18px}
+@media(max-width:800px){.hero,.about-inner{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}nav{display:none}}
+@media(max-width:500px){.grid{grid-template-columns:1fr}.secondary{margin-left:0;margin-top:8px}}
+</style>
+</head>
+<body>
+<header>
+<div class="nav">
+<div class="logo">MAIGA <span>ÉLEVAGE</span></div>
+<nav><a href="#produits">Produits</a><a href="#apropos">À propos</a><a href="#commande">Commander</a></nav>
+</div>
+</header>
+
+<main>
+<div class="hero">
+<div>
+<span class="badge">🇧🇫 Vente en ligne — Burkina Faso</span>
+<h1>La qualité de l’élevage, directement chez vous.</h1>
+<p>Découvrez nos volailles et produits d’élevage. Commandez facilement et contactez-nous directement par WhatsApp.</p>
+<a class="btn primary" href="#produits">Voir les produits</a>
+<a class="btn secondary" href="#commande">Commander</a>
+</div>
+<div class="hero-card"><div class="emoji">🐔 🐣 🦃</div><h3>Maiga Élevage</h3><p>Volailles • Pintadeaux • Dindons • Poules pondeuses</p></div>
+</div>
+
+<section id="produits">
+<div class="title"><h2>Nos produits</h2><p>Choisissez votre produit et envoyez votre demande.</p></div>
+<div class="grid">
+<article class="card"><div class="pic">🐣</div><div class="content"><h3>Pintadeaux</h3><p>Jeunes pintadeaux pour démarrer ou renforcer votre élevage.</p><div class="price">À partir de 45 000 F CFA</div><button class="btn order" onclick="choose('Pintadeaux')">Commander</button></div></article>
+<article class="card"><div class="pic">🐔</div><div class="content"><h3>Poulets</h3><p>Volailles sélectionnées pour vos besoins d’élevage ou de consommation.</p><div class="price">Prix sur demande</div><button class="btn order" onclick="choose('Poulets')">Commander</button></div></article>
+<article class="card"><div class="pic">🦃</div><div class="content"><h3>Dindons</h3><p>Dindons disponibles selon les arrivages et les périodes.</p><div class="price">Prix sur demande</div><button class="btn order" onclick="choose('Dindons')">Commander</button></div></article>
+<article class="card"><div class="pic">🥚</div><div class="content"><h3>Poules pondeuses</h3><p>Pour les éleveurs souhaitant développer une activité de ponte.</p><div class="price">Prix sur demande</div><button class="btn order" onclick="choose('Poules pondeuses')">Commander</button></div></article>
+</div>
+</section>
+
+<div class="about" id="apropos"><div class="about-inner">
+<div><h2>À propos de Maiga Élevage</h2><p>Nous proposons des volailles et des solutions adaptées aux éleveurs au Burkina Faso. Notre objectif : qualité, disponibilité et accompagnement.</p><p>📍 Ouagadougou / Béguédo<br>📱 WhatsApp : <strong>+226 54 09 88 13</strong></p></div>
+<div><h2>Pourquoi nous choisir ?</h2><p>✓ Commande simple<br>✓ Contact direct<br>✓ Produits d’élevage sélectionnés<br>✓ Conseils pour les éleveurs<br>✓ Service adapté au Burkina Faso</p></div>
+</div></div>
+
+<section id="commande">
+<div class="title"><h2>Passer une commande</h2><p>Remplissez le formulaire : votre demande sera préparée pour WhatsApp.</p></div>
+<form onsubmit="sendWhatsApp(event)">
+<label for="nom">Nom complet</label><input id="nom" required placeholder="Votre nom">
+<label for="tel">Téléphone</label><input id="tel" required placeholder="+226 ...">
+<label for="produit">Produit</label><select id="produit" required><option value="">Choisir</option><option>Pintadeaux</option><option>Poulets</option><option>Dindons</option><option>Poules pondeuses</option></select>
+<label for="qte">Quantité</label><input id="qte" required placeholder="Ex. 1 carton / 20 sujets">
+<label for="lieu">Lieu de livraison / retrait</label><input id="lieu" required placeholder="Ouagadougou, Béguédo, etc.">
+<label for="message">Message</label><textarea id="message" placeholder="Précisions supplémentaires"></textarea>
+<button class="btn submit" type="submit">📲 Envoyer la commande sur WhatsApp</button>
+</form>
+</section>
+</main>
+
+<footer>© 2026 Maiga Élevage — Vente de volailles au Burkina Faso</footer>
+
+<script>
+const whatsapp="22654098813";
+function choose(p){document.getElementById('produit').value=p;document.getElementById('commande').scrollIntoView({behavior:'smooth'});}
+function sendWhatsApp(e){
+ e.preventDefault();
+ const nom=document.getElementById('nom').value,tel=document.getElementById('tel').value,p=document.getElementById('produit').value,q=document.getElementById('qte').value,l=document.getElementById('lieu').value,m=document.getElementById('message').value;
+ const text=`Bonjour Maiga Élevage,%0A%0AJe souhaite passer une commande.%0A%0A👤 Nom : ${nom}%0A📞 Téléphone : ${tel}%0A🐔 Produit : ${p}%0A📦 Quantité : ${q}%0A📍 Lieu : ${l}%0A📝 Message : ${m}`;
+ window.open(`https://wa.me/${whatsapp}?text=${text}`,'_blank');
+}
+</script>
+</body>
+</html>
